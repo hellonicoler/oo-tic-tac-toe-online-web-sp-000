@@ -64,7 +64,6 @@ def winner
     end
   end
 end
-end
 
 def won?
 WIN_COMBINATIONS.each { |win_combination|
