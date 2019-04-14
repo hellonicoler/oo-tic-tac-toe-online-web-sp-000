@@ -111,7 +111,7 @@ end
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
-end
+
 
 def play
   until over?
@@ -122,4 +122,8 @@ def play
   elsif draw?
     puts "Cat's Game!"
   end
+end
+
+
+
 end
