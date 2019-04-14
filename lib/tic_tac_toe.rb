@@ -53,6 +53,19 @@ def full?
   @board.all? {|i| i == "X" || i == "O"}
 end
 
+def winner
+  WIN_COMBINATIONS.detect do |win_combo|
+    if (@board[win_combo[0]]) == "X" && (@board[win_combo[1]]) == "X" && (@board[win_combo[2]]) == "X"
+      return "X"
+    elsif (@board[win_combo[0]]) == "O" && (@board[win_combo[1]]) == "O" && (@board[win_combo[2]]) == "O"
+      return "O"
+    else
+      nil
+    end
+  end
+end
+end
+
 def won?
 WIN_COMBINATIONS.each { |win_combination|
   # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
